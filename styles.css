@@ -1,0 +1,53 @@
+body{
+    background-color:black;
+   height: auto;
+   width: auto;
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.button{
+    margin-top: 100px;
+    margin-left: 50px;
+    width:25vw;
+    height: 25vh;
+    align-items: center;
+}
+
+button{
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#000;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+    background-color:#fff;
+    width:960px;
+    height: 960px;
+    overflow: hidden;
+   
+
+  
+    
+}
+
+.grid{
+    background-color:white;
+    border:black 1px solid;
+    width: 58px;
+    height: 58px;
+}
+
+.color{
+    background-color: black;
+}
