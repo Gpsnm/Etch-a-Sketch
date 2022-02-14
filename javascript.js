@@ -2,18 +2,32 @@
 
 const button = document.querySelector('button');
 const container = document.getElementById('container');
-const reloadButton = document.querySelector('#reload')
-let gridSize = prompt('What Size Grid Would You Like?');
-newGridSize();
+const reloadButton = document.querySelector('#reload');
 
 
-// create new grid 
+// start game function with ability to choose size of the grid.
+button.addEventListener('click' , () => {
+    let gridNumber = prompt('What Size Grid Would You Like?');
+    newGridSize(gridNumber);
+    
+});
 
-function newGridSize(){
-    container.innerHTML = '';
-    // container.style.setProperty('grid-template-columns', gridSize,'2fr');
-    // container.style.setProperty('grid-template-rows',gridSize,'2fr');
-    for (i=0; i< gridSize; i++){
+
+// reload button 
+
+reloadButton.addEventListener('click' , () => {
+    location.reload();
+});
+
+
+// create a new grid with ability to pass a parameter.
+
+function newGridSize(gridNumber){
+    container.innerHTML='';
+   let gridArea = gridNumber * gridNumber;
+    for (i=0; i< gridArea; i++){
+        container.style.gridTemplateColumns = `repeat(${gridNumber}, 1fr)`;
+        container.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
         const  grid = document.createElement('div')
 grid.classList.add('grid');
 container.appendChild(grid);
@@ -22,24 +36,17 @@ grid.onmouseover = function(){
     }
 }};
 
-
-// reload button 
-
-reloadButton.addEventListener('click' , () => {
-    location.reload()
-    newGridSize()
-    
-});
+                     
     
 // create grid function 
-button.addEventListener('click', () => {
-for (i=0; i<256;i++){
-const  grid = document.createElement('div')
-grid.classList.add('grid');
-container.appendChild(grid);
-grid.onmouseover = function(){
-    this.style.backgroundColor = 'black'
-};
-}});
+// button.addEventListener('click', () => {
+// for (i=0; i<256;i++){
+// const  grid = document.createElement('div')
+// grid.classList.add('grid');
+// container.appendChild(grid);
+// grid.onmouseover = function(){
+//     this.style.backgroundColor = 'black'
+// };
+// }});
 
 

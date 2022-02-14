@@ -1,3 +1,6 @@
+
+
+
 body{
     background-color:black;
    height: auto;
@@ -29,24 +32,20 @@ button{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(16,1fr);
+    grid-template-columns: repeat(16,1fr);
     background-color:#fff;
-    width:960px;
-    height: 960px;
+    width:940px;
+    height: 940px;
     overflow: hidden;
-   
+    border:5px grey solid;
 
-  
-    
 }
+
 
 .grid{
     background-color:white;
-    border:black 1px solid;
-    /* width: 58px;
-    height: 58px; */
-}
+    border:black 1px solid;}
 
 .color{
     background-color: black;
