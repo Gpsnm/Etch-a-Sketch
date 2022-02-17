@@ -47,6 +47,12 @@ button{
     background-color:white;
     border:black 1px solid;}
 
-.color{
-    background-color: black;
+#color{
+    display: flex;
+    margin-top: 25px;
+}
+
+p{
+    color: #fff;
+    font-size: 2rem;
 }

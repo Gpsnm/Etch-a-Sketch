@@ -3,6 +3,7 @@
 const button = document.querySelector('button');
 const container = document.getElementById('container');
 const reloadButton = document.querySelector('#reload');
+let colorSelector = document.getElementById('color').value;
 
 
 // start game function with ability to choose size of the grid.
@@ -23,6 +24,7 @@ reloadButton.addEventListener('click' , () => {
 // create a new grid with ability to pass a parameter.
 
 function newGridSize(gridNumber){
+    
     container.innerHTML='';
    let gridArea = gridNumber * gridNumber;
     for (i=0; i< gridArea; i++){
@@ -32,8 +34,9 @@ function newGridSize(gridNumber){
 grid.classList.add('grid');
 container.appendChild(grid);
 grid.onmouseover = function(){
-    this.style.backgroundColor = 'black'
+    this.style.backgroundColor = colorSelector;
     }
+
 }};
 
                      
